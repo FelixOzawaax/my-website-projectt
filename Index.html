@@ -3,10 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Saya</title>
+    <title>Pembagian Link Sosial Media dengan Border 3D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow untuk efek 3D */
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            border: 3px solid transparent; /* Border transparan untuk efek 3D */
+            background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Efek gradasi untuk 3D */
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+        }
+        .container:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: linear-gradient(145deg, #e0e0e0, #ffffff); /* Efek cahaya pada border */
+            border-radius: 10px;
+            z-index: -1;
+        }
+        header {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 20px;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            border: 2px solid transparent; /* Border transparan awal */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek 3D pada tombol */
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, text-shadow 0.3s;
+        }
+        .social-link img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px; /* Menambahkan border-radius untuk logo */
+            padding: 8px; /* Menambahkan padding agar ada jarak antara logo dan latar belakang */
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Shadow pada logo */
+        }
+        .discord { background-color: #7289da; }
+        .whatsapp { background-color: #25d366; }
+        .instagram { background-color: #e4405f; }
+        .tiktok { background-color: #010101; }
+        .twitter { background-color: #ffff; } /* Warna hitam untuk X */
+        .facebook { background-color: #1877f2; }
+
+        /* Memberikan efek bayangan pada teks tombol sosial media */
+        .social-link span {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks yang lebih tajam */
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            border-color: #4CAF50; /* Border saat hover */
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Bayangan teks lebih kuat saat hover */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>Selamat datang di website saya!</h1>
-    <p>Ini adalah halaman utama website saya.</p>
+
+<div class="container">
+    <header>
+        <h1>Link Sosial Media Saya</h1>
+    </header>
+    
+    <div class="social-links">
+        <a href="https://discord.com/invite/yourdiscordlink" class="social-link discord" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Discord_logo_2021.svg" alt="Discord Logo">
+            <span>Discord</span>
+        </a>
+        <a href="https://wa.me/yourphonenumber" class="social-link whatsapp" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            <span>WhatsApp</span>
+        </a>
+        <a href="https://instagram.com/yourusername" class="social-link instagram" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram Logo">
+            <span>Instagram</span>
+        </a>
+        <a href="https://www.tiktok.com/@yourusername" class="social-link tiktok" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/TikTok_logo_2018.svg" alt="TikTok Logo">
+            <span>TikTok</span>
+        </a>
+        <a href="https://twitter.com/yourusername" class="social-link twitter" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X (Twitter) Logo"> <!-- Logo X Twitter -->
+            <span>X (Twitter)</span>
+        </a>
+        <a href="https://www.facebook.com/yourusername" class="social-link facebook" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+            <span>Facebook</span>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Semua Hak Dilindungi</p>
+    </footer>
+</div>
+
 </body>
 </html>
